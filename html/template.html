@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="static/style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+
+        <h2>Paper Summaries</h2>
+
+        {% for url, paper in paper_details.items() %}
+            <div class="card">
+                <h2>{{ paper.title }}</h2>
+                <ul id="authors">
+                    {% for author in paper.authors%}
+                    <li>{{ author["name"] }}</li>
+                    {% endfor %}
+                </ul>
+                
+                <div class="container">
+                    <p>{{ paper.abstract }}</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="{{ paper.linktopdf}}">PDF</a> </li>
+                        <li><a href="{{ paper.linktoabs}}">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+
+    </body>
+</html> 
+

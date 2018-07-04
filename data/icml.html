@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="static/style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+
+        <h2>Paper Summaries</h2>
+
+        
+            <div class="card">
+                <h2>BOCK : Bayesian Optimization with Cylindrical Kernels</h2>
+                <ul id="authors">
+                    
+                    <li>ChangYong Oh</li>
+                    
+                    <li>Efstratios Gavves</li>
+                    
+                    <li>Max Welling</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>A major challenge in Bayesian Optimization is the boundary issue (Swersky,
+2017) where an algorithm spends too many evaluations near the boundary of its
+search space. In this paper, we propose BOCK, Bayesian Optimization with
+Cylindrical Kernels, whose basic idea is to transform the ball geometry of the
+search space using a cylindrical transformation. Because of the transformed
+geometry, the Gaussian Process-based surrogate model spends less budget
+searching near the boundary, while concentrating its efforts relatively more
+near the center of the search region, where we expect the solution to be
+located. We evaluate BOCK extensively, showing that it is not only more
+accurate and efficient, but it also scales successfully to problems with a
+dimensionality as high as 500. We show that the better accuracy and scalability
+of BOCK even allows optimizing modestly sized neural network layers, as well as
+neural network hyperparameters.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1806.01619v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1806.01619v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>To understand deep learning we need to understand kernel learning</h2>
+                <ul id="authors">
+                    
+                    <li>Mikhail Belkin</li>
+                    
+                    <li>Siyuan Ma</li>
+                    
+                    <li>Soumik Mandal</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Generalization performance of classifiers in deep learning has recently
+become a subject of intense study. Deep models, typically over-parametrized,
+tend to fit the training data exactly. Despite this "overfitting", they perform
+well on test data, a phenomenon not yet fully understood.
+  The first point of our paper is that strong performance of overfitted
+classifiers is not a unique feature of deep learning. Using six real-world and
+two synthetic datasets, we establish experimentally that kernel machines
+trained to have zero classification or near zero regression error perform very
+well on test data, even when the labels are corrupted with a high level of
+noise. We proceed to give a lower bound on the norm of zero loss solutions for
+smooth kernels, showing that they increase nearly exponentially with data size.
+We point out that this is difficult to reconcile with the existing
+generalization bounds. Moreover, none of the bounds produce non-trivial results
+for interpolating solutions.
+  Second, we show experimentally that (non-smooth) Laplacian kernels easily fit
+random labels, a finding that parallels results for ReLU neural networks. In
+contrast, fitting noisy data requires many more epochs for smooth Gaussian
+kernels. Similar performance of overfitted Laplacian and Gaussian classifiers
+on test, suggests that generalization is tied to the properties of the kernel
+function rather than the optimization process.
+  Certain key phenomena of deep learning are manifested similarly in kernel
+methods in the modern "overfitted" regime. The combination of the experimental
+and theoretical results presented in this paper indicates a need for new
+theoretical ideas for understanding properties of classical kernel methods. We
+argue that progress on understanding deep learning will be difficult until more
+tractable "shallow" kernel methods are better understood.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1802.01396v3">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1802.01396v3">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Disentangled Sequential Autoencoder</h2>
+                <ul id="authors">
+                    
+                    <li>Yingzhen Li</li>
+                    
+                    <li>Stephan Mandt</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>We present a VAE architecture for encoding and generating high dimensional
+sequential data, such as video or audio. Our deep generative model learns a
+latent representation of the data which is split into a static and dynamic
+part, allowing us to approximately disentangle latent time-dependent features
+(dynamics) from features which are preserved over time (content). This
+architecture gives us partial control over generating content and dynamics by
+conditioning on either one of these sets of features. In our experiments on
+artificially generated cartoon video clips and voice recordings, we show that
+we can convert the content of a given sequence into another one by such content
+swapping. For audio, this allows us to convert a male speaker into a female
+speaker and vice versa, while for video we can separately manipulate shapes and
+dynamics. Furthermore, we give empirical evidence for the hypothesis that
+stochastic RNNs as latent state models are more efficient at compressing and
+generating long sequences than deterministic ones, which may be relevant for
+applications in video compression.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1803.02991v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1803.02991v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Message Passing Stein Variational Gradient Descent</h2>
+                <ul id="authors">
+                    
+                    <li>Jingwei Zhuo</li>
+                    
+                    <li>Chang Liu</li>
+                    
+                    <li>Jiaxin Shi</li>
+                    
+                    <li>Jun Zhu</li>
+                    
+                    <li>Ning Chen</li>
+                    
+                    <li>Bo Zhang</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Stein variational gradient descent (SVGD) is a recently proposed
+particle-based Bayesian inference method, which has attracted a lot of interest
+due to its remarkable approximation ability and particle efficiency compared to
+traditional variational inference and Markov Chain Monte Carlo methods.
+However, we observed that particles of SVGD tend to collapse to modes of the
+target distribution, and this particle degeneracy phenomenon becomes more
+severe with higher dimensions. Our theoretical analysis finds out that there
+exists a negative correlation between the dimensionality and the repulsive
+force of SVGD which should be blamed for this phenomenon. We propose Message
+Passing SVGD (MP-SVGD) to solve this problem. By leveraging the conditional
+independence structure of probabilistic graphical models (PGMs), MP-SVGD
+converts the original high-dimensional global inference problem into a set of
+local ones over the Markov blanket with lower dimensions. Experimental results
+show its advantages of preventing vanishing repulsive force in high-dimensional
+space over SVGD, and its particle efficiency and approximation flexibility over
+other inference methods on graphical models.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1711.04425v3">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1711.04425v3">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Learning in Integer Latent Variable Models with Nested Automatic
+  Differentiation</h2>
+                <ul id="authors">
+                    
+                    <li>Daniel Sheldon</li>
+                    
+                    <li>Kevin Winner</li>
+                    
+                    <li>Debora Sujono</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>We develop nested automatic differentiation (AD) algorithms for exact
+inference and learning in integer latent variable models. Recently, Winner,
+Sujono, and Sheldon showed how to reduce marginalization in a class of integer
+latent variable models to evaluating a probability generating function which
+contains many levels of nested high-order derivatives. We contribute faster and
+more stable AD algorithms for this challenging problem and a novel algorithm to
+compute exact gradients for learning. These contributions lead to significantly
+faster and more accurate learning algorithms, and are the first AD algorithms
+whose running time is polynomial in the number of levels of nesting.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1806.03207v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1806.03207v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Noise2Noise: Learning Image Restoration without Clean Data</h2>
+                <ul id="authors">
+                    
+                    <li>Jaakko Lehtinen</li>
+                    
+                    <li>Jacob Munkberg</li>
+                    
+                    <li>Jon Hasselgren</li>
+                    
+                    <li>Samuli Laine</li>
+                    
+                    <li>Tero Karras</li>
+                    
+                    <li>Miika Aittala</li>
+                    
+                    <li>Timo Aila</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>We apply basic statistical reasoning to signal reconstruction by machine
+learning -- learning to map corrupted observations to clean signals -- with a
+simple and powerful conclusion: under certain common circumstances, it is
+possible to learn to restore signals without ever observing clean ones, at
+performance close or equal to training using clean exemplars. We show
+applications in photographic noise removal, denoising of synthetic Monte Carlo
+images, and reconstruction of MRI scans from undersampled inputs, all based on
+only observing corrupted data.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1803.04189v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1803.04189v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Learning to Speed Up Structured Output Prediction</h2>
+                <ul id="authors">
+                    
+                    <li>Xingyuan Pan</li>
+                    
+                    <li>Vivek Srikumar</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Predicting structured outputs can be computationally onerous due to the
+combinatorially large output spaces. In this paper, we focus on reducing the
+prediction time of a trained black-box structured classifier without losing
+accuracy. To do so, we train a speedup classifier that learns to mimic a
+black-box classifier under the learning-to-search approach. As the structured
+classifier predicts more examples, the speedup classifier will operate as a
+learned heuristic to guide search to favorable regions of the output space. We
+present a mistake bound for the speedup classifier and identify inference
+situations where it can independently make correct judgments without input
+features. We evaluate our method on the task of entity and relation extraction
+and show that the speedup classifier outperforms even greedy search in terms of
+speed without loss of accuracy.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1806.04245v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1806.04245v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Differentiable Compositional Kernel Learning for Gaussian Processes</h2>
+                <ul id="authors">
+                    
+                    <li>Shengyang Sun</li>
+                    
+                    <li>Guodong Zhang</li>
+                    
+                    <li>Chaoqi Wang</li>
+                    
+                    <li>Wenyuan Zeng</li>
+                    
+                    <li>Jiaman Li</li>
+                    
+                    <li>Roger Grosse</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>The generalization properties of Gaussian processes depend heavily on the
+choice of kernel, and this choice remains a dark art. We present the Neural
+Kernel Network (NKN), a flexible family of kernels represented by a neural
+network. The NKN architecture is based on the composition rules for kernels, so
+that each unit of the network corresponds to a valid kernel. It can compactly
+approximate compositional kernel structures such as those used by the Automatic
+Statistician (Lloyd et al., 2014), but because the architecture is
+differentiable, it is end-to-end trainable with gradient-based optimization. We
+show that the NKN is universal for the class of stationary kernels. Empirically
+we demonstrate pattern discovery and extrapolation abilities of NKN on several
+tasks that depend crucially on identifying the underlying structure, including
+time series and texture extrapolation, as well as Bayesian optimization.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1806.04326v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1806.04326v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Bayesian Optimization of Combinatorial Structures</h2>
+                <ul id="authors">
+                    
+                    <li>Ricardo Baptista</li>
+                    
+                    <li>Matthias Poloczek</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>The optimization of expensive-to-evaluate black-box functions over
+combinatorial structures is an ubiquitous task in machine learning, engineering
+and the natural sciences. The combinatorial explosion of the search space and
+costly evaluations pose challenges for current techniques in discrete
+optimization and machine learning, and critically require new algorithmic ideas
+(NIPS BayesOpt 2017). This article proposes, to the best of our knowledge, the
+first algorithm to overcome these challenges, based on an adaptive, scalable
+model that identifies useful combinatorial structure even when data is scarce.
+Our acquisition function pioneers the use of semidefinite programming to
+achieve efficiency and scalability. Experimental evaluations demonstrate that
+this algorithm consistently outperforms other methods from combinatorial and
+Bayesian optimization.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1806.08838v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1806.08838v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Fixing a Broken ELBO</h2>
+                <ul id="authors">
+                    
+                    <li>Alexander A. Alemi</li>
+                    
+                    <li>Ben Poole</li>
+                    
+                    <li>Ian Fischer</li>
+                    
+                    <li>Joshua V. Dillon</li>
+                    
+                    <li>Rif A. Saurous</li>
+                    
+                    <li>Kevin Murphy</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Recent work in unsupervised representation learning has focused on learning
+deep directed latent-variable models. Fitting these models by maximizing the
+marginal likelihood or evidence is typically intractable, thus a common
+approximation is to maximize the evidence lower bound (ELBO) instead. However,
+maximum likelihood training (whether exact or approximate) does not necessarily
+result in a good latent representation, as we demonstrate both theoretically
+and empirically. In particular, we derive variational lower and upper bounds on
+the mutual information between the input and the latent variable, and use these
+bounds to derive a rate-distortion curve that characterizes the tradeoff
+between compression and reconstruction accuracy. Using this framework, we
+demonstrate that there is a family of models with identical ELBO, but different
+quantitative and qualitative characteristics. Our framework also suggests a
+simple new method to ensure that latent variable models with powerful
+stochastic decoders do not ignore their latent code.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1711.00464v3">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1711.00464v3">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Tighter Variational Bounds are Not Necessarily Better</h2>
+                <ul id="authors">
+                    
+                    <li>Tom Rainforth</li>
+                    
+                    <li>Adam R. Kosiorek</li>
+                    
+                    <li>Tuan Anh Le</li>
+                    
+                    <li>Chris J. Maddison</li>
+                    
+                    <li>Maximilian Igl</li>
+                    
+                    <li>Frank Wood</li>
+                    
+                    <li>Yee Whye Teh</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>We provide theoretical and empirical evidence that using tighter evidence
+lower bounds (ELBOs) can be detrimental to the process of learning an inference
+network by reducing the signal-to-noise ratio of the gradient estimator. Our
+results call into question common implicit assumptions that tighter ELBOs are
+better variational objectives for simultaneous model learning and inference
+amortization schemes. Based on our insights, we introduce three new algorithms:
+the partially importance weighted auto-encoder (PIWAE), the multiply importance
+weighted auto-encoder (MIWAE), and the combination importance weighted
+auto-encoder (CIWAE), each of which includes the standard importance weighted
+auto-encoder (IWAE) as a special case. We show that each can deliver
+improvements over IWAE, even when performance is measured by the IWAE target
+itself. Furthermore, our results suggest that PIWAE may be able to deliver
+simultaneous improvements in the training of both the inference and generative
+networks.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1802.04537v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1802.04537v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Learning Implicit Generative Models with the Method of Learned Moments</h2>
+                <ul id="authors">
+                    
+                    <li>Suman Ravuri</li>
+                    
+                    <li>Shakir Mohamed</li>
+                    
+                    <li>Mihaela Rosca</li>
+                    
+                    <li>Oriol Vinyals</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>We propose a method of moments (MoM) algorithm for training large-scale
+implicit generative models. Moment estimation in this setting encounters two
+problems: it is often difficult to define the millions of moments needed to
+learn the model parameters, and it is hard to determine which properties are
+useful when specifying moments. To address the first issue, we introduce a
+moment network, and define the moments as the network's hidden units and the
+gradient of the network's output with the respect to its parameters. To tackle
+the second problem, we use asymptotic theory to highlight desiderata for
+moments -- namely they should minimize the asymptotic variance of estimated
+model parameters -- and introduce an objective to learn better moments. The
+sequence of objectives created by this Method of Learned Moments (MoLM) can
+train high-quality neural image samplers. On CIFAR-10, we demonstrate that
+MoLM-trained generators achieve significantly higher Inception Scores and lower
+Frechet Inception Distances than those trained with gradient
+penalty-regularized and spectrally-normalized adversarial objectives. These
+generators also achieve nearly perfect Multi-Scale Structural Similarity Scores
+on CelebA, and can create high-quality samples of 128x128 images.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1806.11006v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1806.11006v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Semi-Implicit Variational Inference</h2>
+                <ul id="authors">
+                    
+                    <li>Mingzhang Yin</li>
+                    
+                    <li>Mingyuan Zhou</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Semi-implicit variational inference (SIVI) is introduced to expand the
+commonly used analytic variational distribution family, by mixing the
+variational parameter with a flexible distribution. This mixing distribution
+can assume any density function, explicit or not, as long as independent random
+samples can be generated via reparameterization. Not only does SIVI expand the
+variational family to incorporate highly flexible variational distributions,
+including implicit ones that have no analytic density functions, but also
+sandwiches the evidence lower bound (ELBO) between a lower bound and an upper
+bound, and further derives an asymptotically exact surrogate ELBO that is
+amenable to optimization via stochastic gradient ascent. With a substantially
+expanded variational family and a novel optimization algorithm, SIVI is shown
+to closely match the accuracy of MCMC in inferring the posterior in a variety
+of Bayesian inference tasks.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1805.11183v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1805.11183v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Dissecting Adam: The Sign, Magnitude and Variance of Stochastic
+  Gradients</h2>
+                <ul id="authors">
+                    
+                    <li>Lukas Balles</li>
+                    
+                    <li>Philipp Hennig</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>The ADAM optimizer is exceedingly popular in the deep learning community.
+Often it works very well, sometimes it doesn't. Why? We interpret ADAM as a
+combination of two aspects: for each weight, the update direction is determined
+by the sign of stochastic gradients, whereas the update magnitude is determined
+by an estimate of their relative variance. We disentangle these two aspects and
+analyze them in isolation, gaining insight into the mechanisms underlying ADAM.
+This analysis also extends recent results on adverse effects of ADAM on
+generalization, isolating the sign aspect as the problematic one. Transferring
+the variance adaptation to SGD gives rise to a novel method, completing the
+practitioner's toolbox for problems where ADAM fails.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1705.07774v3">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1705.07774v3">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Neural Autoregressive Flows</h2>
+                <ul id="authors">
+                    
+                    <li>Chin-Wei Huang</li>
+                    
+                    <li>David Krueger</li>
+                    
+                    <li>Alexandre Lacoste</li>
+                    
+                    <li>Aaron Courville</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Normalizing flows and autoregressive models have been successfully combined
+to produce state-of-the-art results in density estimation, via Masked
+Autoregressive Flows (MAF), and to accelerate state-of-the-art WaveNet-based
+speech synthesis to 20x faster than real-time, via Inverse Autoregressive Flows
+(IAF). We unify and generalize these approaches, replacing the (conditionally)
+affine univariate transformations of MAF/IAF with a more general class of
+invertible univariate transformations expressed as monotonic neural networks.
+We demonstrate that the proposed neural autoregressive flows (NAF) are
+universal approximators for continuous probability distributions, and their
+greater expressivity allows them to better capture multimodal target
+distributions. Experimentally, NAF yields state-of-the-art performance on a
+suite of density estimation tasks and outperforms IAF in variational
+autoencoders trained on binarized MNIST.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1804.00779v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1804.00779v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>DVAE++: Discrete Variational Autoencoders with Overlapping
+  Transformations</h2>
+                <ul id="authors">
+                    
+                    <li>Arash Vahdat</li>
+                    
+                    <li>William G. Macready</li>
+                    
+                    <li>Zhengbing Bian</li>
+                    
+                    <li>Amir Khoshaman</li>
+                    
+                    <li>Evgeny Andriyash</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Training of discrete latent variable models remains challenging because
+passing gradient information through discrete units is difficult. We propose a
+new class of smoothing transformations based on a mixture of two overlapping
+distributions, and show that the proposed transformation can be used for
+training binary latent models with either directed or undirected priors. We
+derive a new variational bound to efficiently train with Boltzmann machine
+priors. Using this bound, we develop DVAE++, a generative model with a global
+discrete prior and a hierarchy of convolutional continuous variables.
+Experiments on several benchmarks show that overlapping transformations
+outperform other recent continuous relaxations of discrete latent variables
+including Gumbel-Softmax (Maddison et al., 2016; Jang et al., 2016), and
+discrete variational autoencoders (Rolfe 2016).</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1802.04920v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1802.04920v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Learning Maximum-A-Posteriori Perturbation Models for Structured
+  Prediction in Polynomial Time</h2>
+                <ul id="authors">
+                    
+                    <li>Asish Ghoshal</li>
+                    
+                    <li>Jean Honorio</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>MAP perturbation models have emerged as a powerful framework for inference in
+structured prediction. Such models provide a way to efficiently sample from the
+Gibbs distribution and facilitate predictions that are robust to random noise.
+In this paper, we propose a provably polynomial time randomized algorithm for
+learning the parameters of perturbed MAP predictors. Our approach is based on
+minimizing a novel Rademacher-based generalization bound on the expected loss
+of a perturbed MAP predictor, which can be computed in polynomial time. We
+obtain conditions under which our randomized learning algorithm can guarantee
+generalization to unseen examples.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1805.08196v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1805.08196v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Fast and Scalable Bayesian Deep Learning by Weight-Perturbation in Adam</h2>
+                <ul id="authors">
+                    
+                    <li>Mohammad Emtiyaz Khan</li>
+                    
+                    <li>Didrik Nielsen</li>
+                    
+                    <li>Voot Tangkaratt</li>
+                    
+                    <li>Wu Lin</li>
+                    
+                    <li>Yarin Gal</li>
+                    
+                    <li>Akash Srivastava</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Uncertainty computation in deep learning is essential to design robust and
+reliable systems. Variational inference (VI) is a promising approach for such
+computation, but requires more effort to implement and execute compared to
+maximum-likelihood methods. In this paper, we propose new natural-gradient
+algorithms to reduce such efforts for Gaussian mean-field VI. Our algorithms
+can be implemented within the Adam optimizer by perturbing the network weights
+during gradient evaluations, and uncertainty estimates can be cheaply obtained
+by using the vector that adapts the learning rate. This requires lower memory,
+computation, and implementation effort than existing VI methods, while
+obtaining uncertainty estimates of comparable quality. Our empirical results
+confirm this and further suggest that the weight-perturbation in our algorithm
+could be useful for exploration in reinforcement learning and stochastic
+optimization.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1806.04854v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1806.04854v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Junction Tree Variational Autoencoder for Molecular Graph Generation</h2>
+                <ul id="authors">
+                    
+                    <li>Wengong Jin</li>
+                    
+                    <li>Regina Barzilay</li>
+                    
+                    <li>Tommi Jaakkola</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>We seek to automate the design of molecules based on specific chemical
+properties. In computational terms, this task involves continuous embedding and
+generation of molecular graphs. Our primary contribution is the direct
+realization of molecular graphs, a task previously approached by generating
+linear SMILES strings instead of graphs. Our junction tree variational
+autoencoder generates molecular graphs in two phases, by first generating a
+tree-structured scaffold over chemical substructures, and then combining them
+into a molecule with a graph message passing network. This approach allows us
+to incrementally expand molecules while maintaining chemical validity at every
+step. We evaluate our model on multiple tasks ranging from molecular generation
+to optimization. Across these tasks, our model outperforms previous
+state-of-the-art baselines by a significant margin.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1802.04364v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1802.04364v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Variational Gaussian Dropout is not Bayesian</h2>
+                <ul id="authors">
+                    
+                    <li>Jiri Hron</li>
+                    
+                    <li>Alexander G. de G. Matthews</li>
+                    
+                    <li>Zoubin Ghahramani</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Gaussian multiplicative noise is commonly used as a stochastic regularisation
+technique in training of deterministic neural networks. A recent paper
+reinterpreted the technique as a specific algorithm for approximate inference
+in Bayesian neural networks; several extensions ensued. We show that the
+log-uniform prior used in all the above publications does not generally induce
+a proper posterior, and thus Bayesian inference in such models is ill-posed.
+Independent of the log-uniform prior, the correlated weight noise approximation
+has further issues leading to either infinite objective or high risk of
+overfitting. The above implies that the reported sparsity of obtained solutions
+cannot be explained by Bayesian or the related minimum description length
+arguments. We thus study the objective from a non-Bayesian perspective, provide
+its previously unknown analytical form which allows exact gradient evaluation,
+and show that the later proposed additive reparametrisation introduces minima
+not present in the original multiplicative parametrisation. Implications and
+future research directions are discussed.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1711.02989v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1711.02989v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Inference Suboptimality in Variational Autoencoders</h2>
+                <ul id="authors">
+                    
+                    <li>Chris Cremer</li>
+                    
+                    <li>Xuechen Li</li>
+                    
+                    <li>David Duvenaud</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Amortized inference allows latent-variable models trained via variational
+learning to scale to large datasets. The quality of approximate inference is
+determined by two factors: a) the capacity of the variational distribution to
+match the true posterior and b) the ability of the recognition network to
+produce good variational parameters for each datapoint. We examine approximate
+inference in variational autoencoders in terms of these factors. We find that
+divergence from the true posterior is often due to imperfect recognition
+networks, rather than the limited complexity of the approximating distribution.
+We show that this is due partly to the generator learning to accommodate the
+choice of approximation. Furthermore, we show that the parameters used to
+increase the expressiveness of the approximation play a role in generalizing
+inference rather than simply improving the complexity of the approximation.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1801.03558v3">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1801.03558v3">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Optimizing the Latent Space of Generative Networks</h2>
+                <ul id="authors">
+                    
+                    <li>Piotr Bojanowski</li>
+                    
+                    <li>Armand Joulin</li>
+                    
+                    <li>David Lopez-Paz</li>
+                    
+                    <li>Arthur Szlam</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Generative Adversarial Networks (GANs) have been shown to be able to sample
+impressively realistic images. GAN training consists of a saddle point
+optimization problem that can be thought of as an adversarial game between a
+generator which produces the images, and a discriminator, which judges if the
+images are real. Both the generator and the discriminator are commonly
+parametrized as deep convolutional neural networks. The goal of this paper is
+to disentangle the contribution of the optimization procedure and the network
+parametrization to the success of GANs. To this end we introduce and study
+Generative Latent Optimization (GLO), a framework to train a generator without
+the need to learn a discriminator, thus avoiding challenging adversarial
+optimization problems. We show experimentally that GLO enjoys many of the
+desirable properties of GANs: learning from large data, synthesizing
+visually-appealing samples, interpolating meaningfully between samples, and
+performing linear arithmetic with noise vectors.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1707.05776v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1707.05776v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>A Spectral Approach to Gradient Estimation for Implicit Distributions</h2>
+                <ul id="authors">
+                    
+                    <li>Jiaxin Shi</li>
+                    
+                    <li>Shengyang Sun</li>
+                    
+                    <li>Jun Zhu</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Recently there have been increasing interests in learning and inference with
+implicit distributions (i.e., distributions without tractable densities). To
+this end, we develop a gradient estimator for implicit distributions based on
+Stein's identity and a spectral decomposition of kernel operators, where the
+eigenfunctions are approximated by the Nystr\"om method. Unlike the previous
+works that only provide estimates at the sample points, our approach directly
+estimates the gradient function, thus allows for a simple and principled
+out-of-sample extension. We provide theoretical results on the error bound of
+the estimator and discuss the bias-variance tradeoff in practice. The
+effectiveness of our method is demonstrated by applications to gradient-free
+Hamiltonian Monte Carlo and variational inference with implicit distributions.
+Finally, we discuss the intuition behind the estimator by drawing connections
+between the Nystr\"om method and kernel PCA, which indicates that the estimator
+can automatically adapt to the geometry of the underlying distribution.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1806.02925v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1806.02925v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Learning to Explain: An Information-Theoretic Perspective on Model
+  Interpretation</h2>
+                <ul id="authors">
+                    
+                    <li>Jianbo Chen</li>
+                    
+                    <li>Le Song</li>
+                    
+                    <li>Martin J. Wainwright</li>
+                    
+                    <li>Michael I. Jordan</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>We introduce instancewise feature selection as a methodology for model
+interpretation. Our method is based on learning a function to extract a subset
+of features that are most informative for each given example. This feature
+selector is trained to maximize the mutual information between selected
+features and the response variable, where the conditional distribution of the
+response variable given the input is the model to be explained. We develop an
+efficient variational approximation to the mutual information, and show the
+effectiveness of our method on a variety of synthetic and real data sets using
+both quantitative metrics and human evaluation.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1802.07814v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1802.07814v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Black Box FDR</h2>
+                <ul id="authors">
+                    
+                    <li>Wesley Tansey</li>
+                    
+                    <li>Yixin Wang</li>
+                    
+                    <li>David M. Blei</li>
+                    
+                    <li>Raul Rabadan</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Analyzing large-scale, multi-experiment studies requires scientists to test
+each experimental outcome for statistical significance and then assess the
+results as a whole. We present Black Box FDR (BB-FDR), an empirical-Bayes
+method for analyzing multi-experiment studies when many covariates are gathered
+per experiment. BB-FDR learns a series of black box predictive models to boost
+power and control the false discovery rate (FDR) at two stages of study
+analysis. In Stage 1, it uses a deep neural network prior to report which
+experiments yielded significant outcomes. In Stage 2, a separate black box
+model of each covariate is used to select features that have significant
+predictive power across all experiments. In benchmarks, BB-FDR outperforms
+competing state-of-the-art methods in both stages of analysis. We apply BB-FDR
+to two real studies on cancer drug efficacy. For both studies, BB-FDR increases
+the proportion of significant outcomes discovered and selects variables that
+reveal key genomic drivers of drug sensitivity and resistance in cancer.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1806.03143v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1806.03143v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Patterns of Scalable Bayesian Inference</h2>
+                <ul id="authors">
+                    
+                    <li>Elaine Angelino</li>
+                    
+                    <li>Matthew James Johnson</li>
+                    
+                    <li>Ryan P. Adams</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Datasets are growing not just in size but in complexity, creating a demand
+for rich models and quantification of uncertainty. Bayesian methods are an
+excellent fit for this demand, but scaling Bayesian inference is a challenge.
+In response to this challenge, there has been considerable recent work based on
+varying assumptions about model structure, underlying computational resources,
+and the importance of asymptotic correctness. As a result, there is a zoo of
+ideas with few clear overarching principles.
+  In this paper, we seek to identify unifying principles, patterns, and
+intuitions for scaling Bayesian inference. We review existing work on utilizing
+modern computing resources with both MCMC and variational approximation
+techniques. From this taxonomy of ideas, we characterize the general principles
+that have proven successful for designing scalable inference procedures and
+comment on the path forward.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1602.05221v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1602.05221v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Black-box Importance Sampling</h2>
+                <ul id="authors">
+                    
+                    <li>Qiang Liu</li>
+                    
+                    <li>Jason D. Lee</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Importance sampling is widely used in machine learning and statistics, but
+its power is limited by the restriction of using simple proposals for which the
+importance weights can be tractably calculated. We address this problem by
+studying black-box importance sampling methods that calculate importance
+weights for samples generated from any unknown proposal or black-box mechanism.
+Our method allows us to use better and richer proposals to solve difficult
+problems, and (somewhat counter-intuitively) also has the additional benefit of
+improving the estimation accuracy beyond typical importance sampling. Both
+theoretical and empirical analyses are provided.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1610.05247v1">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1610.05247v1">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Adversarial Autoencoders</h2>
+                <ul id="authors">
+                    
+                    <li>Alireza Makhzani</li>
+                    
+                    <li>Jonathon Shlens</li>
+                    
+                    <li>Navdeep Jaitly</li>
+                    
+                    <li>Ian Goodfellow</li>
+                    
+                    <li>Brendan Frey</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>In this paper, we propose the "adversarial autoencoder" (AAE), which is a
+probabilistic autoencoder that uses the recently proposed generative
+adversarial networks (GAN) to perform variational inference by matching the
+aggregated posterior of the hidden code vector of the autoencoder with an
+arbitrary prior distribution. Matching the aggregated posterior to the prior
+ensures that generating from any part of prior space results in meaningful
+samples. As a result, the decoder of the adversarial autoencoder learns a deep
+generative model that maps the imposed prior to the data distribution. We show
+how the adversarial autoencoder can be used in applications such as
+semi-supervised classification, disentangling style and content of images,
+unsupervised clustering, dimensionality reduction and data visualization. We
+performed experiments on MNIST, Street View House Numbers and Toronto Face
+datasets and show that adversarial autoencoders achieve competitive results in
+generative modeling and semi-supervised classification tasks.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1511.05644v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1511.05644v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Adversarial Variational Bayes: Unifying Variational Autoencoders and
+  Generative Adversarial Networks</h2>
+                <ul id="authors">
+                    
+                    <li>Lars Mescheder</li>
+                    
+                    <li>Sebastian Nowozin</li>
+                    
+                    <li>Andreas Geiger</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Variational Autoencoders (VAEs) are expressive latent variable models that
+can be used to learn complex probability distributions from training data.
+However, the quality of the resulting model crucially relies on the
+expressiveness of the inference model. We introduce Adversarial Variational
+Bayes (AVB), a technique for training Variational Autoencoders with arbitrarily
+expressive inference models. We achieve this by introducing an auxiliary
+discriminative network that allows to rephrase the maximum-likelihood-problem
+as a two-player game, hence establishing a principled connection between VAEs
+and Generative Adversarial Networks (GANs). We show that in the nonparametric
+limit our method yields an exact maximum-likelihood assignment for the
+parameters of the generative model, as well as the exact posterior distribution
+over the latent variables given an observation. Contrary to competing
+approaches which combine VAEs with GANs, our approach has a clear theoretical
+justification, retains most advantages of standard Variational Autoencoders and
+is easy to implement.</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1701.04722v4">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1701.04722v4">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Improved Regularization of Convolutional Neural Networks with Cutout</h2>
+                <ul id="authors">
+                    
+                    <li>Terrance DeVries</li>
+                    
+                    <li>Graham W. Taylor</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Convolutional neural networks are capable of learning powerful
+representational spaces, which are necessary for tackling complex learning
+tasks. However, due to the model capacity required to capture such
+representations, they are often susceptible to overfitting and therefore
+require proper regularization in order to generalize well. In this paper, we
+show that the simple regularization technique of randomly masking out square
+regions of input during training, which we call cutout, can be used to improve
+the robustness and overall performance of convolutional neural networks. Not
+only is this method extremely easy to implement, but we also demonstrate that
+it can be used in conjunction with existing forms of data augmentation and
+other regularizers to further improve model performance. We evaluate this
+method by applying it to current state-of-the-art architectures on the
+CIFAR-10, CIFAR-100, and SVHN datasets, yielding new state-of-the-art results
+of 2.56%, 15.20%, and 1.30% test error respectively. Code is available at
+https://github.com/uoguelph-mlrg/Cutout</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1708.04552v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1708.04552v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Improved Regularization of Convolutional Neural Networks with Cutout</h2>
+                <ul id="authors">
+                    
+                    <li>Terrance DeVries</li>
+                    
+                    <li>Graham W. Taylor</li>
+                    
+                </ul>
+                
+                <div class="container">
+                    <p>Convolutional neural networks are capable of learning powerful
+representational spaces, which are necessary for tackling complex learning
+tasks. However, due to the model capacity required to capture such
+representations, they are often susceptible to overfitting and therefore
+require proper regularization in order to generalize well. In this paper, we
+show that the simple regularization technique of randomly masking out square
+regions of input during training, which we call cutout, can be used to improve
+the robustness and overall performance of convolutional neural networks. Not
+only is this method extremely easy to implement, but we also demonstrate that
+it can be used in conjunction with existing forms of data augmentation and
+other regularizers to further improve model performance. We evaluate this
+method by applying it to current state-of-the-art architectures on the
+CIFAR-10, CIFAR-100, and SVHN datasets, yielding new state-of-the-art results
+of 2.56%, 15.20%, and 1.30% test error respectively. Code is available at
+https://github.com/uoguelph-mlrg/Cutout</p>    
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="http://arxiv.org/pdf/1708.04552v2">PDF</a> </li>
+                        <li><a href="http://arxiv.org/abs/1708.04552v2">Arxiv.org</a> </li>
+                    </ul>
+                </div>
+            </div>
+        
+
+    </body>
+</html> 
