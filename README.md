@@ -6,20 +6,9 @@ It displays the title, authors, abstract and a link to access the pdf.
 Usecase: When going through papers published at a conference, I open the arxiv url of each of the papers in a separate tab in the browser.
 This results in a lot of open tabs in the browser. Instead of doing this, I keep a list of the arxiv urls in a text file. This script helps `convert the list of urls` to a `list of research paper details` (title, authors, abstracts, pdf link) which is much easy to refer to subsequently. 
 
-## Rough outline of a single "card" 
-
-> --------------------------------------
->                Title
-> --------------------------------------
->                Authors
-> ======================================
-> Abstract
-> ....
-> ======================================
->                 PDF
-> --------------------------------------
-
-# Software and its ependencies:
+# Demo
+Converts list of [arxiv urls](https://github.com/kunalghosh/Conference-Grok/blob/master/data/icml.txt) to [deck of CSS Cards](https://htmlpreview.github.io/?https://github.com/kunalghosh/Conference-Grok/blob/master/html/icml.html)
+# Dependencies:
 
 0. Python3  : This is a Python based project.
 2. Jinja2   : For generating the HTML
