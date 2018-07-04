@@ -1,5 +1,4 @@
 # About
-
 A simple CSS card interface to sift through a list of ArXiv links.
 It displays the title, authors, abstract and a link to access the pdf.
 
@@ -8,14 +7,14 @@ This results in a lot of open tabs in the browser. Instead of doing this, I keep
 
 # Demo
 Converts list of [arxiv urls](https://github.com/kunalghosh/Conference-Grok/blob/master/data/icml.txt) to [deck of CSS Cards](https://htmlpreview.github.io/?https://github.com/kunalghosh/Conference-Grok/blob/master/html/icml.html)
-# Dependencies:
 
-0. Python3  : This is a Python based project.
+# Dependencies:
+1. Python3  : This is a Python based project.
 2. Jinja2   : For generating the HTML
-3. CSS      : CSS is used to generate the "card" like interface.
-4. FeedParser : parses Atom feed returned by arxiv.org
+3. FeedParser : parses Atom feed returned by arxiv.org
+4. Web Browser
 
 # How to use ?
 1. Create a text file `data_file.txt` in ./data containing arxiv links.
 2. Run `python3 generate_cards.py data_file.txt` which generates an html file in ./html with the same name as `data_file.txt`
-3. Open ./html/`data_file.html`
+3. Open ./html/`data_file.html` in your favourite web browser (needs CSS)
