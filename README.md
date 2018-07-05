@@ -8,6 +8,8 @@ This results in a lot of open tabs in the browser. Instead of doing this, I keep
 # Demo
 Converts list of [arxiv urls](https://github.com/kunalghosh/Conference-Grok/blob/master/data/icml.txt) to [deck of CSS Cards](https://htmlpreview.github.io/?https://github.com/kunalghosh/Conference-Grok/blob/master/html/icml.html)
 
+![gif demo](https://media.giphy.com/media/7OWsu9E23HiViWZV8L/giphy.gif)
+
 # Dependencies:
 1. Python3  : This is a Python based project.
 2. Jinja2   : For generating the HTML
