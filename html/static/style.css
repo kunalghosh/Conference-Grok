@@ -28,10 +28,18 @@ ul {
     margin: 2px -2px 2px 2px;
 }
 
+#refinedUrls{
+    /* border: 1px solid; */
+}
+
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .container {
     padding: 16px 16px 16px 16px;
+}
+
+.selected {
+    border : 5px solid red;
 }

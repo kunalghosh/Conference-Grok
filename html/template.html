@@ -8,7 +8,11 @@
     <body>
 
         <h2>Paper Summaries</h2>
-
+        <div id="refinedUrls">
+            <h4>Refined List</h4>
+             <ul id="selectedURLs"></ul>     
+        </div>
+       
         {% for url, paper in paper_details.items() %}
             <div class="card">
                 <h2>{{ paper.title }}</h2>
@@ -23,13 +27,35 @@
                 </div>
                 <div class="container">
                     <ul>
-                        <li><a href="{{ paper.linktopdf}}">PDF</a> </li>
-                        <li><a href="{{ paper.linktoabs}}">Arxiv.org</a> </li>
+                        <li><a class="pdf" href="{{ paper.linktopdf}}">PDF</a> </li>
+                        <li><a class="arxiv" href="{{ paper.linktoabs}}">Arxiv.org</a> </li>
                     </ul>
                 </div>
             </div>
         {% endfor %}
 
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script charset="utf-8">
+        var urls = [];
+        $(".card").click(function(){
+                $(this).toggleClass('selected');
+                var url = $(this).find(".arxiv").prop("href");
+                if(urls.indexOf(url) == -1){
+                    // If url is not in urls add it.
+                    urls.push(url);
+                } else {
+                    // Remove url from the array of urls, if it exists.
+                    urls = urls.filter(function(item){
+                                    return item !== url;
+                                });
+                }
+                // Replace <p> at beginning of page with urls.
+                $("#selectedURLs").empty()
+                for(var url of urls){
+                    $("#selectedURLs").append($("<li>").append(url));
+                }
+        });    
+    </script>
 </html> 
 
